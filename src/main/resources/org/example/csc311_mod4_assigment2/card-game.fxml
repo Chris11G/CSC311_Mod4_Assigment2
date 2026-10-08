@@ -18,7 +18,7 @@
 <VBox styleClass="root-pane" spacing="16.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.csc311_mod4_assigment2.CardGameController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="40.0" left="50.0" right="50.0" top="34.0"/>
     </padding>
 
     <Label text="Card Game - 24" styleClass="title"/>

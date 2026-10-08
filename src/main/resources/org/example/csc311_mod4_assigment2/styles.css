@@ -1,43 +1,71 @@
-/* Styling for the Card Game - 24 */
+/* Styling for the Card Game - 24 (poker table theme) */
 
+/*
+ * The whole window is a poker table, built from three stacked backgrounds:
+ *   1. a dark wooden rail around the outside
+ *   2. a thin gold trim line just inside the rail
+ *   3. green felt, lighter in the middle like a table under a lamp
+ * -fx-background-insets moves each layer inward; -fx-background-radius rounds its corners.
+ */
 .root-pane {
-    -fx-background-color: #f4f1ea;
+    -fx-background-color:
+            linear-gradient(to bottom, #6b3e1e, #3a1f0c),
+            #c9a227,
+            radial-gradient(center 50% 45%, radius 75%, #2f9a5f, #1b6b3f 60%, #0f4a2a);
+    -fx-background-insets: 0, 16, 18;
+    -fx-background-radius: 0, 70, 68;
     -fx-font-family: "Segoe UI", "Arial", sans-serif;
     -fx-font-size: 14px;
 }
 
-.title {
-    -fx-font-size: 22px;
+/* Text sitting directly on the felt is light so it stays readable */
+.root-pane .label {
+    -fx-text-fill: #f3ead2;
     -fx-font-weight: bold;
-    -fx-text-fill: #2f4f2f;
 }
 
+.root-pane .title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #e8c547;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 4, 0, 1, 1);
+}
+
+/* Casino-style buttons: dark with a gold edge */
 .button {
-    -fx-background-color: #2f6f4f;
-    -fx-text-fill: white;
+    -fx-background-color: #c9a227, linear-gradient(to bottom, #2b2b2b, #111111);
+    -fx-background-insets: 0, 2;
+    -fx-text-fill: #f3ead2;
     -fx-font-weight: bold;
-    -fx-background-radius: 6;
-    -fx-padding: 6 14 6 14;
+    -fx-background-radius: 16, 14;
+    -fx-padding: 6 16 6 16;
     -fx-cursor: hand;
 }
 
 .button:hover {
-    -fx-background-color: #3d8a63;
+    -fx-background-color: #e8c547, linear-gradient(to bottom, #3a3a3a, #1c1c1c);
 }
 
 .button:pressed {
-    -fx-background-color: #24563d;
+    -fx-background-color: #a8861d, #000000;
+}
+
+.text-field {
+    -fx-background-radius: 6;
 }
 
 .solution-field {
     -fx-font-family: "Consolas", monospace;
 }
 
-/* Green "felt" table behind the cards */
+/* Slightly darker oval of felt where the cards are dealt */
 .card-table {
-    -fx-background-color: #1f6b45;
-    -fx-background-radius: 10;
-    -fx-padding: 20;
+    -fx-background-color: rgba(0, 0, 0, 0.18);
+    -fx-border-color: rgba(243, 234, 210, 0.35);
+    -fx-border-style: dashed;
+    -fx-border-width: 2;
+    -fx-background-radius: 90;
+    -fx-border-radius: 90;
+    -fx-padding: 22 40 22 40;
 }
 
 /* A single card */
