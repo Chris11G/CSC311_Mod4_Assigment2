@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Layout for the Card Game - 24.
+    Top row:    "Find a Solution" button, solution display, "Refresh" button
+    Middle row: the four cards (filled in by CardGameController)
+    Bottom row: expression input and "Verify" button
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="root-pane" spacing="16.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.csc311_mod4_assigment2.CardGameController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="Card Game - 24" styleClass="title"/>
+
+    <!-- Top controls -->
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Button text="Find a Solution" onAction="#onFindSolutionClick"/>
+        <TextField fx:id="solutionField" editable="false" promptText="Solution appears here"
+                   prefWidth="220.0" styleClass="solution-field"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Refresh" onAction="#onRefreshClick"/>
+    </HBox>
+
+    <!-- The four cards -->
+    <HBox fx:id="cardBox" spacing="14.0" alignment="CENTER" styleClass="card-table"/>
+
+    <!-- Player input; pressing Enter in the field also verifies -->
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label text="Enter an expression:"/>
+        <TextField fx:id="expressionField" promptText="e.g. (6+6)*12/6" HBox.hgrow="ALWAYS"
+                   onAction="#onVerifyClick"/>
+        <Button text="Verify" onAction="#onVerifyClick"/>
+    </HBox>
+</VBox>

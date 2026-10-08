@@ -1,0 +1,75 @@
+/* Styling for the Card Game - 24 */
+
+.root-pane {
+    -fx-background-color: #f4f1ea;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 14px;
+}
+
+.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f4f2f;
+}
+
+.button {
+    -fx-background-color: #2f6f4f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #3d8a63;
+}
+
+.button:pressed {
+    -fx-background-color: #24563d;
+}
+
+.solution-field {
+    -fx-font-family: "Consolas", monospace;
+}
+
+/* Green "felt" table behind the cards */
+.card-table {
+    -fx-background-color: #1f6b45;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+}
+
+/* A single card */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #888888;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 6;
+    -fx-min-width: 100;
+    -fx-min-height: 145;
+    -fx-max-width: 100;
+    -fx-max-height: 145;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0, 2, 2);
+}
+
+.card-red .label {
+    -fx-text-fill: #c62828;
+}
+
+.card-black .label {
+    -fx-text-fill: #1a1a1a;
+}
+
+.card-corner {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-line-spacing: -4;
+}
+
+.card-center {
+    -fx-font-size: 40px;
+}
